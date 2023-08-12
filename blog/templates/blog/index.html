@@ -2,7 +2,7 @@
 {% block content %}
     {% for post in posts %}
         <div class="post">
-            <h1><a href="">{{ post.title }}</a></h1>
+            <h1><a href="{% url 'detail' pk=post.pk %}">{{ post.title }}</a></h1>
             {% if post.photo %}
             <p><img src="{{ post.photo.url }}" width="100" height="100"></p>
             {% endif %}
